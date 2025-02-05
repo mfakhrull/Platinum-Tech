@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="ProjectAppWeb.User" %>
+
+<%@ Register Src="~/UserControls/LoginStatus.ascx" TagPrefix="uc1" TagName="LoginStatus" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8b288ae8ef.js" crossorigin="anonymous"></script>
+    <link href="Styles/StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header / Banner -->
+        <nav class="navbar navbar-expand-md bg-light sticky-top border-bottom mb-4">
+            <a href="Default.aspx"><img class="ms-5" src="Images/logo-platinum-notitle.png" class="" alt="" width="85" height="65" /></a>
+            <a class="navbar-brand text-dark fw-bold" href="Default.aspx">Platinum Tech</a>
+            <!-- Other navigation elements here -->
+        </nav>
+        <div class="ms-5">
+            <div>
+                <uc1:LoginStatus runat="server" ID="LoginStatus" />
+            </div>
+            <br />
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
